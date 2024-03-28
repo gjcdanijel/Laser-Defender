@@ -1,0 +1,37 @@
+[33mcommit b61c9148b8727e4774e84880944bcea051daf5d5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32madditional-features[m[33m)[m
+Author: gjcdanijel <gajicdanijel5@gmail.com>
+Date:   Thu Mar 28 18:14:07 2024 +0100
+
+    Added: Explosion effects, screen shaking, moving background, sound effects and background music, also score tracking!
+
+[33mcommit a4b3e3b678f57a6349c6d49673aa074f1e8b164a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: gjcdanijel <151783485+gjcdanijel@users.noreply.github.com>
+Date:   Thu Mar 28 09:45:29 2024 +0100
+
+    Create .gitattributes
+    
+    Added a .gitattrubutes file.
+
+[33mcommit 814b99276bec16db77f90f653cb99d2c37287c7b[m
+Author: gjcdanijel <gajicdanijel5@gmail.com>
+Date:   Thu Mar 28 09:33:52 2024 +0100
+
+    Added basic functionalities: damage, health, enemies, shooting, projectiles and synchronized enemy shooting.
+
+[33mcommit bbb83008bb857c63dbe796a3796dac7d128a8591[m
+Author: gjcdanijel <gajicdanijel5@gmail.com>
+Date:   Tue Mar 26 20:40:25 2024 +0100
+
+    Add empty project
+
+[33mcommit 973978549363bb3e0a35fd6bdfa97a1f73de4f0a[m
+Author: gjcdanijel <151783485+gjcdanijel@users.noreply.github.com>
+Date:   Tue Mar 26 20:26:17 2024 +0100
+
+    Update README.md
+
+[33mcommit 5b51289abc82368ec08ddeed92cb6d1a95b61ff8[m
+Author: gjcdanijel <151783485+gjcdanijel@users.noreply.github.com>
+Date:   Tue Mar 26 20:25:15 2024 +0100
+
+    Initial commit
