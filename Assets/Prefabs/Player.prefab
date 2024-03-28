@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  hitEffect: {fileID: 5192560339466862804, guid: f691c87e2e9e11549a20697e752bff73, type: 3}
+  applyCameraShake: 1
 --- !u!114 &6420765247448591955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,8 +161,10 @@ MonoBehaviour:
   projectPrefab: {fileID: 9223117719215899454, guid: ac13943b5c599bd439ba6c754724cf6a, type: 3}
   projectileSpeed: 10
   projectileLifeTime: 5
-  firingRate: 0.2
+  baseFiringRate: 0.2
   useAI: 0
+  firingRateVariance: 0
+  minimumFiringRate: 0.1
   isFiring: 0
 --- !u!114 &6111389429064337571
 MonoBehaviour:

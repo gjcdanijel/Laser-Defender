@@ -17,6 +17,11 @@ public class Shooter : MonoBehaviour
     [HideInInspector] public bool isFiring;
 
     Coroutine firingCoroutine;
+    AudioPlayer audioPlayer;
+    private void Awake()
+    {
+        audioPlayer = FindAnyObjectByType<AudioPlayer>();
+    }
     void Start()
     {
         if (useAI)
@@ -31,7 +36,6 @@ public class Shooter : MonoBehaviour
     }
     void Fire()
     {
-        Debug.Log("Firing!!!");
         if (isFiring && firingCoroutine == null)
         {
 
@@ -47,7 +51,6 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("In loop!!!");
             GameObject instance = Instantiate(projectPrefab,
                 transform.position,
                 Quaternion.identity);
@@ -59,6 +62,9 @@ public class Shooter : MonoBehaviour
             Destroy(instance, projectileLifeTime);
             float timeToNextProjectile = Random.Range(baseFiringRate - firingRateVariance, baseFiringRate + firingRateVariance);
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
+
+            audioPlayer.PlayShootingClip();
+
             yield return new WaitForSeconds(timeToNextProjectile);
         }
     }
