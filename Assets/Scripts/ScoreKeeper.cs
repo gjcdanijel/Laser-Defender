@@ -1,11 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreKeeper : MonoBehaviour
 {
     int currentScore = 0;
 
+    static ScoreKeeper instance;
+    // public ScoreKeeper GetInstance()
+    // {
+    //     return instance;
+    // }
+    void Awake()
+    {
+        ManageSingleton();
+    }
+    void ManageSingleton()
+    {
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     public int GetScore()
     {
         return currentScore;

@@ -12,8 +12,8 @@ public class Health : MonoBehaviour
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
     AudioPlayer audioPlayer;
-
     ScoreKeeper scoreKeeper;
+    LevelManager levelManager;
 
 
 
@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,7 +37,7 @@ public class Health : MonoBehaviour
             audioPlayer.PlayDamageClip();
         }
     }
-    public int GetHealt()
+    public int GetHealth()
     {
         return health;
     }
@@ -54,6 +55,10 @@ public class Health : MonoBehaviour
         if (!isPlayer)
         {
             scoreKeeper.AddScore(score);
+        }
+        else
+        {
+            levelManager.LoadGameOver();
         }
         Destroy(gameObject);
     }
