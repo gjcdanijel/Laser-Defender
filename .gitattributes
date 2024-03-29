@@ -1,2 +1,6 @@
 *.html linguist-detectable=false
 UpgradeLog.htm/* linguist-vendored
+*.shader binary
+*.hlsl binary
+*.shader linguist-detectable=false
+*.hlsl linguist-detectable=false
