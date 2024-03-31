@@ -2,5 +2,8 @@
 UpgradeLog.htm/* linguist-vendored
 *.shader binary
 *.hlsl binary
+*.cginc binary
 *.shader linguist-detectable=false
 *.hlsl linguist-detectable=false
+*.cginc linguist-detectable=false
+
